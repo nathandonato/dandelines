@@ -3,16 +3,20 @@ from flask.ext.mysql import MySQL
 from werkzeug import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
-mysql = MySQL()
+# mysql = MySQL()
  
 # MySQL configurations
-app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'root'
-app.config['MYSQL_DATABASE_DB'] = 'dande'
-app.config['MYSQL_DATABASE_HOST'] = 'localhost'
-mysql.init_app(app)
+# app.config['MYSQL_DATABASE_USER'] = 'root'
+# app.config['MYSQL_DATABASE_PASSWORD'] = 'root'
+# app.config['MYSQL_DATABASE_DB'] = 'dande'
+# app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+# mysql.init_app(app)
 
 # Routes
 @app.route("/")
 def main():
+    # return "hey"
     return render_template('index.html')
+
+if __name__ == "__main__":
+    app.run()

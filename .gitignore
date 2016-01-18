@@ -1,1 +1,2 @@
-env/
+views/bower_components
+views/node_modules

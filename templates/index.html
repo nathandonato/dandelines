@@ -3,11 +3,28 @@
     <head>
         <title>dandelines</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <!-- include libraries(jQuery, bootstrap) -->
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script> 
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
+        <!-- include summernote css/js-->
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.0/summernote.css" rel="stylesheet">
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.0/summernote.js"></script>
     </head>
     <body>
         <div class="container">
             <div class="row">
-                <textarea class="col-lg-12"></textarea>
+                <div class="col-lg-2"></div>
+                <div id="summernote" class="summernote col-lg-8">Hello Summernote</div>
+                <div class="col-lg-2"></div>
             </div>
         </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.summernote').summernote({
+                height: 300,
+                width: 300
+            });
+        });
+    </script>
     </body>

@@ -3,13 +3,15 @@
     <head>
         <title>dandelines</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-        <!-- include libraries(jQuery, bootstrap) -->
+        <!-- include libraries(jQuery, bootstrap, summernote) -->
         <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script> 
         <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
-        <!-- include summernote css/js-->
         <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.0/summernote.css" rel="stylesheet">
         <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.0/summernote.js"></script>
+        <!-- include static files-->
+        <link rel="stylesheet" type="text/css" href="static/css/dandelines.css">
+        <script src="static/js/dandelines.js"></script> 
     </head>
     <body>
         <div class="container">
@@ -20,68 +22,4 @@
             </div>
         </div>
         <div class="frosted-glass"></div>
-
-    <!-- TODO: Move styles to another file -->
-    <style type="text/css">
-        html {
-            background: url("http://i.imgur.com/dZIXt2C.jpg") no-repeat center center fixed; 
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-        body {
-            background-color: transparent !important;
-        }
-        .frosted-glass {
-            background-color: white !important;
-            background-size: cover !important;
-            opacity: 0.4 !important;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            -webkit-filter: blur(5px);
-            -moz-filter: blur(5px);
-            -o-filter: blur(5px);
-            -ms-filter: blur(5px);
-            filter: blur(5px);
-        }
-        .note-editing-area {
-            padding-top : 10% !important;
-            height: 400px !important;
-        }
-        .note-editor { 
-            border: none !important;
-            background-color: transparent !important;
-        }
-        .note-style {
-            margin-left : 3% !important;
-        }
-        .panel-body {
-            height: 400px !important;
-            background-color: transparent !important;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-        }
-        .panel-heading {
-            border: none !important;
-            background-color: transparent !important;
-            padding-bottom: 10% !important;
-        }
-
-    </style>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#summernote').summernote({
-            });
-
-            $(".frosted-glass").appendTo(".note-editing-area");
-            $(".note-editable").appendTo(".note-editing-area");
-        });
-    </script>
     </body>

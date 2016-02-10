@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    // Set background image
+    setBackgroundImage();
+
     // Initialize summernote
     $('#summernote').summernote({
     });
@@ -21,10 +24,25 @@ $(window).resize(function(){
     setElementHeight(".note-editing-area", getHeightByWindow());
 });
 
+function getHeightByWindow() {
+    return $(document).height() - 273;
+}
+
+function setBackgroundImage() {
+    $.get("/getBackgrounds", function(data){
+        var urls = JSON.parse(data).backgrounds;
+        var url = urls[Math.floor(Math.random()*urls.length+1)];
+        $("html").css({'background': 'url(' + url + ') no-repeat center center fixed', 
+        '-webkit-background-size': 'cover',
+        '-moz-background-size': 'cover',
+        '-o-background-size': 'cover',
+        'background-size': 'cover'
+        });
+    });
+}
+
 function setElementHeight(element, size) {
     $(element).height(size);
 }
 
-function getHeightByWindow() {
-    return $(document).height() - 273;
-}
+

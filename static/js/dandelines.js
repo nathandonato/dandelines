@@ -1,25 +1,30 @@
 $(document).ready(function() {
+    // Initialize summernote
     $('#summernote').summernote({
     });
 
+    // Set editor's size
     setElementHeight(".note-editing-area", getHeightByWindow());
+
+    // Add custom background div
     $(".frosted-glass").appendTo(".note-editing-area");
+
+    // Move editor above background div
     $(".note-editable").appendTo(".note-editing-area");
 
-    $(".note-statusbar").on("click", function(){
-    	$(".panel-body").css({position: relative});
-    });
+    // Remove the manual resize option
+    $(".note-statusbar").remove();
 });
 
 $(window).resize(function(){
-	console.log("resize");
+    // Set editor's size again on resize
     setElementHeight(".note-editing-area", getHeightByWindow());
-})
+});
 
 function setElementHeight(element, size) {
-	$(element).height(size);
+    $(element).height(size);
 }
 
 function getHeightByWindow() {
-  	return $(document).height() - 273;// - $(".panel-heading").height();
+    return $(document).height() - 273;
 }

@@ -25,7 +25,6 @@ body {
 }
 .note-editing-area {
     padding-top : 10% !important;
-    height: 400px !important;
 }
 .note-editor { 
     border: none !important;
@@ -35,7 +34,6 @@ body {
     margin-left : 3% !important;
 }
 .panel-body {
-    height: 400px !important;
     background-color: transparent !important;
     position: absolute;
     top: 0;

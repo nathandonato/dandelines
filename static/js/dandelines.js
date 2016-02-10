@@ -1,6 +1,8 @@
 $(document).ready(function() {
     // Set background image
     setBackgroundImage();
+    // Set date
+    setToday();
 
     // Initialize summernote
     $('#summernote').summernote({
@@ -39,6 +41,10 @@ function setBackgroundImage() {
         'background-size': 'cover'
         });
     });
+}
+
+function setToday() {
+    $("#today").text(Date.create().format('{Month} {d}, {yyyy}'));
 }
 
 function setElementHeight(element, size) {

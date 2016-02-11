@@ -8,6 +8,8 @@ $(document).ready(function() {
     $('#summernote').summernote({
     });
 
+    postData();
+
     // Set editor's size
     setElementHeight(".note-editing-area", getHeightByWindow());
 
@@ -51,4 +53,12 @@ function setElementHeight(element, size) {
     $(element).height(size);
 }
 
+function postData(){
+    // POST 
+    // Since this deals with backend and the rest is strictly front end, consider moving to another file?
+}
 
+function getData(){
+    // GET
+    // Since this deals with backend and the rest is strictly front end, consider moving to another file?
+}

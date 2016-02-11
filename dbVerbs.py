@@ -19,6 +19,7 @@ def createEntry(form):
     cursor.close()
     connection.close()
 
+    # Verify it was made. Shouldn't the execute() return the row in this cursor, though?
     return getEntry(form)
 
 def getEntry(form):
@@ -37,3 +38,15 @@ def getEntry(form):
     connection.close()
 
     return entry
+
+def updateEntry(form):
+    connection = dbConnect()
+    cursor = connection.cursor()
+    cursor.execute("UPDATE journals SET entry = \'" + form['entry'] + "\' WHERE user_id = " + form['user_id'] + " AND entry_date = \'" + form['entry_date'] + "\' LIMIT 1;")
+
+    # Commit and close connection
+    connection.commit()
+    cursor.close()
+    connection.close()
+
+    return "true"

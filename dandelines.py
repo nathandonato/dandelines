@@ -28,6 +28,10 @@ def getJournal():
     else:
         return entry
 
+@app.route("/writeJournal", methods=['PUT'])
+def writeJournal():
+    return updateEntry(request.form)
+
 if __name__ == "__main__":
     app.debug = True
     app.run()

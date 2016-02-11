@@ -56,9 +56,11 @@ function setElementHeight(element, size) {
 function postData(){
     // POST 
     // Since this deals with backend and the rest is strictly front end, consider moving to another file?
+    // Nah prob not
 }
 
 function getData(){
     // GET
     // Since this deals with backend and the rest is strictly front end, consider moving to another file?
+    // Nah prob not
 }
